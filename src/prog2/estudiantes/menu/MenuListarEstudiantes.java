@@ -1,7 +1,6 @@
 package prog2.estudiantes.menu;
 
 import prog2.estudiantes.Estudiante;
-import prog2.estudiantes.RegistroEstudiantes;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,13 +21,13 @@ public class MenuListarEstudiantes implements Menu {
         System.out.println();
         for(Estudiante estudiante : registro) {
             System.out.println();
-            System.out.println("\t" + estudiante.getNombre() + " " + estudiante.getApellido());
-            System.out.println("\t\tFecha de nacimiento: " + estudiante.getFechaNacimiento());
-            System.out.println("\t\tEstado: " + estudiante.getEstado());
-            System.out.println("\t\tID: " + estudiante.getId());
-            System.out.println("\t\tCarrera: " + estudiante.getCarrera().getNombre() + " (" + estudiante.getCarrera().getCodigo() + ")");
-            System.out.println("\t\tCédula: " + estudiante.getCedula());
-            System.out.println("\t\tEs extranjero: " + (estudiante.esExtranjero() ? "Si" : "No"));
+            System.out.println("\t" + estudiante.nombre + " " + estudiante.apellido);
+            System.out.println("\t\tFecha de nacimiento: " + estudiante.fechaNacimiento);
+            System.out.println("\t\tEstado: " + estudiante.estado);
+            System.out.println("\t\tID: " + estudiante.id);
+            System.out.println("\t\tCarrera: " + estudiante.carrera.getNombre() + " (" + estudiante.carrera.getCodigo() + ")");
+            System.out.println("\t\tCédula: " + estudiante.cedula);
+            System.out.println("\t\tEs extranjero: " + (estudiante.esExtranjero ? "Si" : "No"));
         }
         System.out.println();
         return true;
