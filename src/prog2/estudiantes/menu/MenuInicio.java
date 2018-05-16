@@ -2,7 +2,10 @@ package prog2.estudiantes.menu;
 
 import prog2.estudiantes.Estudiante;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class MenuInicio implements Menu {
 
@@ -22,7 +25,7 @@ public class MenuInicio implements Menu {
             i++;
         }
         System.out.print("Introduzca el número de la opción a seleccionar: ");
-        String input = scanner.next();
+        String input = scanner.nextLine();
         try {
             i = Integer.parseInt(input);
             if(i < 1 || i > opciones.size()) i = -1;

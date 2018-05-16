@@ -13,7 +13,7 @@ public class Cedula {
 
     public static Cedula crearCedula(String input) {
         if(REGEX_CEDULA.matcher(input).matches()) {
-            if(input.length() == 11) input = input.substring(0,3) + "-" + input.substring(3,7) + "-" + input.substring(7,11);
+            if(input.length() == 11) input = input.substring(0,3) + "-" + input.substring(3,10) + "-" + input.substring(10,11);
             return new Cedula(input);
         }
         return null;

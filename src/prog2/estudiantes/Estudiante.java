@@ -16,6 +16,9 @@ public class Estudiante {
     public Cedula cedula;
     public boolean esExtranjero = false;
 
+    public Estudiante() {
+    }
+
     public Estudiante(String nombre, String apellido, Calendar fechaNacimiento, Estado estado, int id, Carrera carrera, Cedula cedula, boolean esExtranjero) {
         this.nombre = nombre;
         this.apellido = apellido;
