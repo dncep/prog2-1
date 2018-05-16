@@ -15,6 +15,14 @@ public class Entrada {
     private static final Collection<String> VALORES_VERDADEROS = Arrays.asList("SI", "SÍ", "S", "V", "VERDADERO", "T", "Y", "TRUE", "YES");
     private static final Collection<String> VALORES_FALSOS = Arrays.asList("NO", "N", "F", "FALSO", "FALSE");
 
+    /**
+     * Solicita una cadena de caracteres no vacía al usuario. Si comete un error, lo solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar la cadena
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return La cadena insertada por el usuario
+     * */
     public static String getString(String instruccion, Scanner scanner) {
         while(true) {
             System.out.print(instruccion + ": ");
@@ -27,6 +35,14 @@ public class Entrada {
         }
     }
 
+    /**
+     * Solicita una fecha al usuario. Si comete un error, la solicitará de nuevo hasta
+     * conseguir una fecha válida.
+     * @param instruccion El mensaje que muestra al solicitar la fecha
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return La fecha insertada por el usuario
+     * */
     public static Calendar getFecha(String instruccion, Scanner scanner) {
         System.out.println(instruccion + ": ");
         int a = getInt("\tIntroduzca el año", scanner, n -> (n > 0 & n <= Calendar.getInstance().get(Calendar.YEAR)));
@@ -38,6 +54,14 @@ public class Entrada {
         return date;
     }
 
+    /**
+     * Solicita un entero al usuario. Si comete un error, lo solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar el entero
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return El entero insertado por el usuario
+     * */
     public static int getInt(String instruccion, Scanner scanner, Predicate<Integer> validacion) {
         while(true) {
             System.out.print(instruccion + ": ");
@@ -54,6 +78,14 @@ public class Entrada {
         }
     }
 
+    /**
+     * Solicita un número de cédula al usuario. Si comete un error, lo solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar la cédula
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return El objeto cédula insertado por el usuario
+     * */
     public static Cedula getCedula(String instruccion, Scanner scanner) {
         while(true) {
             System.out.print(instruccion + ": ");
@@ -68,6 +100,15 @@ public class Entrada {
         }
     }
 
+    /**
+     * Solicita un valor verdadero o falso al usuario de una lista predeterminada de valores.
+     * Si comete un error, lo solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar el valor
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return El boolean representado por el valor insertado por el usuario
+     * */
     public static boolean getBoolean(String instruccion, Scanner scanner) {
         while(true) {
             System.out.print(instruccion + ": ");
@@ -79,6 +120,14 @@ public class Entrada {
         }
     }
 
+    /**
+     * Solicita un estado académico al usuario. Si comete un error, lo solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar el estado
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return El estado insertado por el usuario
+     * */
     public static Estado getEstado(String instruccion, Scanner scanner) {
         while(true) {
             System.out.print(instruccion + ": ");
@@ -92,6 +141,14 @@ public class Entrada {
         }
     }
 
+    /**
+     * Solicita una carrera al usuario por nombre o código. Si comete un error, la solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar la carrera
+     * @param scanner El Scanner que utilizará para la entrada de información
+     *
+     * @return La carrera insertada por el usuario
+     * */
     public static Carrera getCarrera(String instruccion, Scanner scanner) {
         while(true) {
             System.out.print(instruccion + ": ");

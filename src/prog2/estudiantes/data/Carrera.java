@@ -2,6 +2,9 @@ package prog2.estudiantes.data;
 
 import static prog2.estudiantes.data.AreaAcademica.*;
 
+/**
+ * Enumeración que posee las distintas carreras ofrecidas en el INTEC.
+ * */
 public enum Carrera {
     AGN(ECONOMIA,       "Administración y Gestión de Negocios"),
     CAE(ECONOMIA,       "Contabilidad y Auditoría Empresarial"),
@@ -39,18 +42,36 @@ public enum Carrera {
     IMC(INGENIERIAS,    "Ingeniería Mecatrónica"),
     NUC(INGENIERIAS,    "Ingeniería Nuclear");
 
+    /**
+     * El nombre legible de la carrera
+     * */
     private String nombre;
+    /**
+     * El área académica a la que pertenece la carrera. En caso de que el profesor decida hacer algo con esto después.
+     * */
     private AreaAcademica area;
 
+    /**
+     * Crea un objeto Carrera.
+     *
+     * @param area El área académica a la que pertenece la carrera
+     * @param nombre El nombre legible de la carrera
+     * */
     Carrera(AreaAcademica area, String nombre) {
         this.nombre = nombre;
         this.area = area;
     }
 
+    /**
+     * Obtiene el nombre legible de la carrera.
+     * */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Obtiene el código de 3 letras de la carrera.
+     * */
     public String getCodigo() {
         return name();
     }

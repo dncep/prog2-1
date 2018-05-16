@@ -6,6 +6,9 @@ import prog2.estudiantes.data.Estado;
 
 import java.util.Calendar;
 
+/**
+ * Representación de un estudiante como objeto.
+ * */
 public class Estudiante {
     public String nombre;
     public String apellido;
