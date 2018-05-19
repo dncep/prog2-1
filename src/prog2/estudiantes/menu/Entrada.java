@@ -62,6 +62,19 @@ public class Entrada {
      *
      * @return El entero insertado por el usuario
      * */
+    public static int getInt(String instruccion, Scanner scanner) {
+        return getInt(instruccion, scanner, n -> true);
+    }
+
+    /**
+     * Solicita un entero al usuario. Si comete un error, lo solicitará de nuevo hasta
+     * conseguir un valor válido.
+     * @param instruccion El mensaje que muestra al solicitar el entero
+     * @param scanner El Scanner que utilizará para la entrada de información
+     * @param validacion El predicado que determina si el valor numérico insertado es válido
+     *
+     * @return El entero insertado por el usuario
+     * */
     public static int getInt(String instruccion, Scanner scanner, Predicate<Integer> validacion) {
         while(true) {
             System.out.print(instruccion + ": ");

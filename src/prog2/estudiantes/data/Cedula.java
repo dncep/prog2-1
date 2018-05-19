@@ -1,5 +1,6 @@
 package prog2.estudiantes.data;
 
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
@@ -42,5 +43,18 @@ public class Cedula {
     @Override
     public String toString() {
         return cedula;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cedula cedula1 = (Cedula) o;
+        return Objects.equals(cedula, cedula1.cedula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cedula);
     }
 }
